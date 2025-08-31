@@ -1,0 +1,118 @@
+:root {
+    --color-deep-ocean: #193d6b;
+    --color-ocean-light: #2c6da0;
+    --color-sand: #f8f8f8;
+    --color-gold-accent: #d4af37;
+}
+
+body {
+    background: linear-gradient(to bottom, var(--color-ocean-light), var(--color-deep-ocean));
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+
+.main-header {
+    background-color: var(--color-deep-ocean);
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.main-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8em;
+    margin: 0;
+    color: var(--color-sand);
+}
+
+.titanic-card {
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 700px;
+    margin: 30px auto;
+    padding: 30px;
+}
+
+.titanic-card .card-text {
+    font-size: 1.1em;
+    color: #555;
+}
+
+.form-control, .form-select {
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 0.75rem 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+    border-color: var(--color-ocean-light);
+    box-shadow: 0 0 0 0.25rem rgba(44, 109, 160, 0.25);
+}
+
+.btn-titanic {
+    background-color: var(--color-deep-ocean);
+    color: var(--color-sand);
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-titanic:hover {
+    background-color: var(--color-ocean-light);
+    color: var(--color-sand);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.prediction-result {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: var(--color-ocean-light);
+    color: var(--color-sand);
+    border-radius: 10px;
+    font-size: 1.4em;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border: 2px solid var(--color-gold-accent);
+}
+
+.prediction-result p {
+    margin: 0;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('imagem/pexels-joshsorenson-1154510.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.15;
+    z-index: -1;
+}
+
+.form-group.row {
+    margin-bottom: 1.2rem;
+}
+
+.form-group.row label {
+    text-align: left;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.form-group.row > div {
+    width: 100%;
+}
